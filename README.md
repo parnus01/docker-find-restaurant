@@ -10,7 +10,7 @@ This project is demo site for frontend & backend service
 + docker-compose up -d --build (for first time backend / frontend will take time for loading dependency module )
 
 
-## HOW TO WORK
+## HOW IT WORK
 + go to http://localhost:8082/number
 + for number sequence question go to http://localhost:8082/number
 + for find restaurant go to http://localhost:8082/find-restaurants (this task using resatuarant api from backend service)
