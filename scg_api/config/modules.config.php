@@ -13,6 +13,8 @@
 return [
     'Zend\Router',
     'Zend\Validator',
+    'ZfrCors',
     'Application',
-    'Scg'
+    'Scg',
+    'ZfrCors'
 ];

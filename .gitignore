@@ -6,3 +6,5 @@
 scg_api/vendor/
 
 scg_front/package-lock\.json
+
+scg_api/composer\.lock
