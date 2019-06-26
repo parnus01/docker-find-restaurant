@@ -1,4 +1,4 @@
-# boilerplate
+# SCG Assignment SPA
 
 > A Vue.js project with Bootstrap and Webpack
 
