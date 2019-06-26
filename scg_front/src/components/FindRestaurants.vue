@@ -11,6 +11,14 @@
           </div>
         </div>
       </div>
+      <div class="row">
+        <div class="list-group restaurant-list" v-for="(item, index) in result" :key="index">
+          <a href="" class="list-group-item">
+            <h3 class="list-group-item-heading">{{ item.name }}</h3>
+            <p class="list-group-item-text">{{ item.address }}</p>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -31,9 +39,10 @@
         let params = {
           keyword: keyword
         }
+        console.log('dsdsd')
         axios.get(searchApi, { params })
           .then(response => {
-            this.results = response.data.data
+            this.result = response.data.data
           })
       }
     }
@@ -44,5 +53,9 @@
 <style scoped>
   .container {
     margin-top: 45px;
+  }
+  .restaurant-list{
+    width: 100%;
+    margin-top: 15px;
   }
 </style>
