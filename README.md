@@ -11,7 +11,7 @@ This project is demo site for frontend & backend service
 
 
 ## HOW IT WORK
-+ go to http://localhost:8082/number
-+ for number sequence question go to http://localhost:8082/number
-+ for find restaurant go to http://localhost:8082/find-restaurants (this task using resatuarant api from backend service)
++ start on http://localhost:8082/
++ for number sequence question select Number Sequence on navbar
++ for find restaurant select Find Restaurant on navbar (this task using resatuarant api from backend service)
 
