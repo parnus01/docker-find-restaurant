@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  scg_api:
+    build:
+      context: ./scg_api
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    volumes:
+      - ./scg_api:/var/www
+
+  scg_front:
+    build:
+      context: ./scg_front
+      dockerfile: Dockerfile
+    ports:
+      - "8082:8080"
+    volumes:
+      - ./scg_front/src:/app/src

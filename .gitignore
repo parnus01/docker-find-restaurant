@@ -1,0 +1,8 @@
+
+\.idea/
+
+\.DS_Store
+
+scg_api/vendor/
+
+scg_front/package-lock\.json
