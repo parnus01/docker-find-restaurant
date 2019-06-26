@@ -1,15 +1,15 @@
-// http://eslint.org/docs/user-guide/configuring
+// https://eslint.org/docs/user-guide/configuring
 
 module.exports = {
-  root: true,
+  root: false,
   parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module'
   },
   env: {
-    browser: true
+    browser: true,
   },
-  // https://github.com/feross/standard/blob/master/RULES.md#javascript-standard-style
+  // https://github.com/standard/standard/blob/master/docs/RULES-en.md
   extends: 'standard',
   // required to lint *.vue files
   plugins: [
@@ -21,14 +21,11 @@ module.exports = {
     'arrow-parens': 0,
     // allow async-await
     'generator-star-spacing': 0,
-    'no-multiple-empty-lines': [2, {'max': 4}],
-    // allow funName() {} & funName () {} & function() {}
-    'space-before-function-paren': ['error', {
-      'anonymous': 'ignore',
-      'named': 'ignore',
-      'asyncArrow': 'always'
-    }],
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0
+  },
+  globals: {
+    "$": true,
+    "jQuery": true
   }
 }

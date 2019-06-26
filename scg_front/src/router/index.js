@@ -1,21 +1,38 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import RoutesMapConfig from './routes'
-import commonRoutesMap from './commonRoutes'
+import Main from '@/components/Main'
+import Home from '@/components/Home'
+import Number from '@/components/Number'
+import FindRestaurants from '@/components/FindRestaurants'
 
 Vue.use(Router)
 
-const routerInstance = new Router({
+export default new Router({
   mode: 'history',
-  /* ~~~~~~~~~~~~~~~~~~~~~~~~@CHANGE@~~~~~~~~~~~~~~~~~~~~~~~~ */
-  /*
-    @desc: base,应用的基路径;如整个单页应用服务在 /app/ 下，base 就应该设为 "/app/";
-    @reference: https://router.vuejs.org/zh-cn/api/options.html#base
-  */
-  base: '/',
-  linkActiveClass: 'active',
-  scrollBehavior: () => ({ y: 0 }),
-  routes: RoutesMapConfig.concat(commonRoutesMap)
+  history: true,
+  routes: [
+    {
+      path: '/',
+      redirect: '/home',
+      name: 'Home',
+      component: Main,
+      children: [
+        {
+          path: '/home',
+          name: 'Home',
+          component: Home
+        },
+        {
+          path: '/number',
+          name: 'Number',
+          component: Number
+        },
+        {
+          path: '/find-restaurants',
+          name: 'FindRestaurants',
+          component: FindRestaurants
+        }
+      ]
+    }
+  ]
 })
-
-export default routerInstance

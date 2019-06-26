@@ -1,23 +1,18 @@
-import 'babel-polyfill'
-import * as Vue from 'vue/dist/vue.min.js'
-import './global.js'
-import './mixins/globalMixin.js'
+// The Vue build version to load with the `import` command
+// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
+import Vue from 'vue'
 import App from './App'
-import store from './store/index'
 import router from './router'
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'jquery.easing'
+import 'font-awesome/css/font-awesome.css'
 
-/* Configure whether to allow vue-devtools inspection. */
-Vue.config.devtools = process.env.NODE_ENV !== 'production'
-
-/* Suppress all Vue logs and warnings. */
-Vue.config.silent = process.env.NODE_ENV === 'production'
-
-/* Set this to false to prevent the production tip on Vue startup(2.2.0+). */
-Vue.config.productionTip = process.env.NODE_ENV !== 'production'
+Vue.config.productionTip = false
 
 /* eslint-disable no-new */
 new Vue({
+  el: '#app',
   router,
-  store,
   render: h => h(App)
-}).$mount('#root')
+})

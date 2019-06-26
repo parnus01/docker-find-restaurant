@@ -1,13 +1,22 @@
-FROM node
+FROM node:lts-alpine
 
-MAINTAINER nicejade
+# install simple http server for serving static content
+RUN npm install -g http-server
 
-COPY . /app
-
+# make the 'app' folder the current working directory
 WORKDIR /app
 
-RUN npm --production=false install
+# copy both 'package.json' and 'package-lock.json' (if available)
+COPY package*.json ./
+
+# install project dependencies
+RUN npm install
+
+# copy project files and folders to the current working directory (i.e. 'app' folder)
+COPY . .
+
+# build app for production with minification
+RUN npm run build
 
 EXPOSE 8082
-
-CMD npm start
+CMD [ "http-server", "dist" ]
