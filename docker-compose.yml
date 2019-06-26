@@ -5,9 +5,12 @@ services:
       context: ./scg_api
       dockerfile: Dockerfile
     ports:
-      - "8080:80"
+      - "8080:8080"
     volumes:
       - ./scg_api:/var/www
+    tty: true
+    command: bash -c "composer update --no-dev && php -S 0.0.0.0:8080 -t public index.php"
+
 
   scg_front:
     build:
