@@ -17,3 +17,6 @@ This project is demo site for frontend & backend service
 
 - note for backend number sequence api call please call ( http://localhost:8080/api/number-solution )
 
+## DEMO Line Messaging api
+please add
+https://qr-official.line.me/sid/L/326mrfwv.png
