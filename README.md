@@ -15,3 +15,5 @@ This project is demo site for frontend & backend service
 + for number sequence question select Number Sequence on navbar
 + for find restaurant select Find Restaurant on navbar (this task using resatuarant api from backend service)
 
+- note for backend number sequence api call please call ( http://localhost:8080/api/number-solution )
+
