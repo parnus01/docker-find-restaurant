@@ -1,4 +1,4 @@
-# SCG CBM ASSIGNMENT
+# FIND RESTAURANT PROJECT
 This project is demo site for frontend & backend service 
 
 ## Techology
